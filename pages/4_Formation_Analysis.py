@@ -12,7 +12,8 @@ st.set_page_config(page_title="Counter Formation Predictor", layout="wide")
 @st.cache_data
 def load_data():
     try:
-        df = pd.read_csv(r'C:\Users\SA\tiki_taka\merged2_output.csv')
+        df = pd.read_csv('merged2_output.csv')
+
         return df
     except Exception as e:
         st.error(f"Error loading data: {str(e)}")
