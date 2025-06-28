@@ -15,7 +15,7 @@ st.set_page_config(page_title="Football Tactics Classifier", layout="wide")
 @st.cache_data
 def load_data():
     try:
-        df = pd.read_csv(r'C:\Users\SA\tiki_taka\match_anlayze.csv')
+        df = pd.read_csv('match_anlayze.csv')
         return df
     except Exception as e:
         st.error(f"Error loading data: {str(e)}")
